@@ -5,13 +5,6 @@ vim.cmd([[
   set smartindent
 
   autocmd VimEnter * NvimTreeToggle
-  autocmd VimEnter * vertical resize +15
-  autocmd VimEnter * wincmd w
-  autocmd VimEnter * split
-  autocmd VimEnter * wincmd w
-  autocmd VimEnter * terminal
-  autocmd VimEnter * resize 15
-  autocmd VimEnter * wincmd p
   
   set number
 ]])

@@ -49,5 +49,9 @@ require('packer').startup(function(use)
     'romgrk/barbar.nvim',
     requires = {'kyazdani42/nvim-web-devicons'}
   }
+
+  -- nulls-nvim
+  use {'nvim-lua/plenary.nvim'}
+  use {'jose-elias-alvarez/null-ls.nvim'}
 end)
 

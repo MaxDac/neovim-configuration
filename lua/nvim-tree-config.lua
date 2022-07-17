@@ -8,6 +8,7 @@ require("nvim-tree").setup({
         { key = "u", action = "dir_up" },
       },
     },
+    side = "left"
   },
   renderer = {
     group_empty = true,

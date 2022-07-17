@@ -9,3 +9,6 @@ vim.cmd([[
   set number
 ]])
 
+-- Trying to associate the command ':lua vim.lsp.buf.definition()' to a key shortcut 
+vim.api.nvim_set_keymap('n', '<C-b>', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
+

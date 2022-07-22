@@ -1,1 +1,2 @@
-require('feline').setup()
+-- require('feline').setup()
+require('lualine').setup()

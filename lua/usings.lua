@@ -44,6 +44,9 @@ require('packer').startup(function(use)
     -- tag = 'release' -- To use the latest release
   }
 
+  -- use {'APZelos/gitline.vim'}
+  use {'mengelbrecht/lightline-bufferline'}
+
   -- BarBar
   use {
     'romgrk/barbar.nvim',
@@ -53,5 +56,14 @@ require('packer').startup(function(use)
   -- nulls-nvim
   use {'nvim-lua/plenary.nvim'}
   use {'jose-elias-alvarez/null-ls.nvim'}
+  use {'vim-test/vim-test'}
+
+  -- terminal
+  use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+    require("toggleterm").setup()
+  end}
+
+  -- status bar
+  use {'feline-nvim/feline.nvim'}
 end)
 

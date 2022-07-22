@@ -44,9 +44,6 @@ require('packer').startup(function(use)
     -- tag = 'release' -- To use the latest release
   }
 
-  -- use {'APZelos/gitline.vim'}
-  use {'mengelbrecht/lightline-bufferline'}
-
   -- BarBar
   use {
     'romgrk/barbar.nvim',

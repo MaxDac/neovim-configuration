@@ -29,6 +29,9 @@ require('packer').startup(function(use)
   -- use {'Xuyuanp/nerdtree-git-plugin'}
   -- use {'ryanoasis/vim-devicons'}
 
+  -- Dev icons
+  use {'kyazdani42/nvim-web-devicons'}
+
   -- nvim-tree
   use {
     'kyazdani42/nvim-tree.lua',
@@ -43,6 +46,15 @@ require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     -- tag = 'release' -- To use the latest release
   }
+  use {'APZelos/blamer.nvim'}
+  use {'nvim-lua/plenary.nvim'}
+  use {'sindrets/diffview.nvim'}
+  use {
+    'tanvirtin/vgit.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
 
   -- BarBar
   use {
@@ -51,7 +63,6 @@ require('packer').startup(function(use)
   }
 
   -- nulls-nvim
-  use {'nvim-lua/plenary.nvim'}
   use {'jose-elias-alvarez/null-ls.nvim'}
   use {'vim-test/vim-test'}
 
@@ -62,5 +73,13 @@ require('packer').startup(function(use)
 
   -- status bar
   use {'feline-nvim/feline.nvim'}
+
+  -- Telescope
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 end)
 

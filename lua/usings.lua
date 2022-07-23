@@ -25,9 +25,13 @@ require('packer').startup(function(use)
   use {'nvim-treesitter/nvim-treesitter'}
 
   -- NerdTree
-  -- use {'scrooloose/nerdtree'}
-  -- use {'Xuyuanp/nerdtree-git-plugin'}
-  -- use {'ryanoasis/vim-devicons'}
+--  use {
+--    'preservim/nerdtree',
+--    requires = {
+--      'Xuyuanp/nerdtree-git-plugin',
+--      'ryanoasis/vim-devicons'
+--    }
+--  }
 
   -- Dev icons
   use {'kyazdani42/nvim-web-devicons'}

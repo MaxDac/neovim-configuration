@@ -3,10 +3,10 @@ local fn = vim.fn
 local fmt = string.format
 
 require('initial-settings')
-require('ensure')
+require('ensures')
 require('usings')
 require('elixir-config')
-require('helpers')
+require('autocomplete-config')
 require('treesitter-config')
 require('barbar-mapping')
 require('nvim-tree-config')

@@ -1,3 +1,5 @@
+Install efm-langserver (https://github.com/mattn/efm-langserver)
+
 To add credo, install efm-langserver (with brew for instance), and add a file named:
 
 .config/efm-langserver/config.yaml

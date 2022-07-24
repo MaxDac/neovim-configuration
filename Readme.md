@@ -4,7 +4,7 @@ This project configure NeoVim for Elixir usage.
 To use it, clone this repo in the `~/.config` folder and rename it to `nvim`. 
 
 - Explore tree used: Nvim Tree
-- To activate terminal: `:ToggleTerm`
+- To activate terminal: `:ToggleTerm size=20` (change the vertical size if needed).
 - Find in files: `:CtrlSF`
 - To activate Telescope: `:Telescope`
 - To visualise all errors in the project: `:Trouble` (Check integration with Telescope)

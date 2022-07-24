@@ -7,6 +7,20 @@ require('packer').startup(function(use)
   -- lsp config for elixir-ls support
   use {'neovim/nvim-lspconfig'}
 
+  -- Trouble for error visualisation
+  use {
+    "folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+--    Configuration moved to specific file
+--     config = function()
+--       require("trouble").setup {
+--         -- your configuration comes here
+--         -- or leave it empty to use the default settings
+--         -- refer to the configuration section below
+--       }
+--    end
+  }
+
   -- cmp framework for auto-completion support
   use {'hrsh7th/nvim-cmp'}
 
@@ -89,5 +103,8 @@ require('packer').startup(function(use)
   -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  -- Find in files plugin
+  use {'dyng/ctrlsf.vim'}
 end)
 

@@ -1,3 +1,5 @@
+lspconfig = require('lspconfig')
+
 -- `on_attach` callback will be called after a language server
 -- instance has been attached to an open buffer with matching filetype
 -- here we're setting key mappings for hover documentation, goto definitions, goto references, etc
@@ -23,9 +25,14 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 -- setting up the elixir language server
 -- you have to manually specify the entrypoint cmd for elixir-ls
-require('lspconfig').elixirls.setup {
+lspconfig.elixirls.setup {
   cmd = { "elixir-ls" },
   on_attach = on_attach,
   capabilities = capabilities
 }
 
+lspconfig.efm.setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  filetypes = {"elixir"}
+})

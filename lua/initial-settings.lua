@@ -2,7 +2,10 @@ vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.smartindent = true
+-- Shows the line number
 vim.o.number = true
+-- Set relative number from the current line 
+vim.o.relativenumber = true
 vim.o.termguicolors = true
 
 -- Trying to associate the command ':lua vim.lsp.buf.definition()' to a key shortcut 

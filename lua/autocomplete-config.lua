@@ -35,15 +35,15 @@ cmp.setup({
 
     ["<S-Tab>"] = cmp.mapping(function()
       if cmp.visible() then
-	cmp.select_prev_item()
+      	cmp.select_prev_item()
       elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-	feedkey("<Plug>(vsnip-jump-prev)", "")
+      	feedkey("<Plug>(vsnip-jump-prev)", "")
       end
     end, { "i", "s" }),
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'vsnip' }, -- For vsnip users.
+    { name = 'vsnip' },
     { name = 'buffer' }
   })
 })

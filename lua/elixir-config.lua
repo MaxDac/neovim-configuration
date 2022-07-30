@@ -37,3 +37,11 @@ lspconfig.efm.setup({
   on_attach = on_attach,
   filetypes = {"elixir"}
 })
+
+lspconfig.html.setup({
+  capabilities = capabilities
+})
+
+lspconfig.cssls.setup({
+  capabilities = capabilities
+})

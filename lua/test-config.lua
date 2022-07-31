@@ -1,8 +1,8 @@
 vim.cmd([[
 let test#strategy = {
-  \ 'nearest': 'neovim',
+  \ 'nearest': 'basic',
   \ 'file':    'basic',
-  \ 'suite':   'basic',
+  \ 'suite':   'neovim',
 \}
 ]])
 

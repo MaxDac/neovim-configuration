@@ -16,5 +16,6 @@ require('nulls-nvim-config')
 require('terminal-config')
 require('status-bar-config')
 require('telescope-config')
+require('test-config')
 require('initial-commands')
 

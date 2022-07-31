@@ -39,9 +39,15 @@ lspconfig.efm.setup({
 })
 
 lspconfig.html.setup({
-  capabilities = capabilities
+  -- Custom command for the new executables for vscode html language server
+  cmd = {'html-languageserver', '--stdio'},
+  capabilities = capabilities,
+  -- Adding heex files 
+  filetypes = {'html', 'heex'}
 })
 
 lspconfig.cssls.setup({
+  -- Custom command for the new executables for vscode html language server
+  cmd = {'css-languageserver', '--stdio'},
   capabilities = capabilities
 })

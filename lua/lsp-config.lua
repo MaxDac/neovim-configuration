@@ -7,6 +7,9 @@ lspconfig = require('lspconfig')
 local on_attach = function(client, bufnr)
   local opts = { noremap=true, silent=true }
 
+  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  vim.api.nvim_buf_set_option(bufnr, 'tagfunc', 'v:lua.vim.lsp.tagfunc')
+
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -23,6 +26,30 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- lspconfig.sumneko_lua.setup {
+--   settings = {
+--     Lua = {
+--       runtime = {
+--         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+--         version = 'LuaJIT',
+--       },
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = {'vim'},
+--       },
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--       },
+--       -- Do not send telemetry data containing a randomized but unique identifier
+--       telemetry = {
+--         enable = false,
+--       },
+--     },
+--   },
+--   capabilities = capabilities
+-- }
 
 -- setting up the elixir language server
 -- you have to manually specify the entrypoint cmd for elixir-ls
@@ -51,3 +78,14 @@ lspconfig.cssls.setup({
   cmd = {'css-languageserver', '--stdio'},
   capabilities = capabilities
 })
+
+lspconfig.tsserver.setup({
+  capabilities = capabilities,
+  filetypes = {'typescript', 'typescriptreact', 'typescript.tsx'},
+  root_dir = function() return vim.loop.cwd() end
+})
+
+lspconfig.flow.setup({
+  capabilities = capabilities
+})
+

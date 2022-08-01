@@ -5,7 +5,7 @@ local fmt = string.format
 require('initial-settings')
 require('ensures')
 require('usings')
-require('elixir-config')
+require('lsp-config')
 require('autocomplete-config')
 require('trouble-config')
 require('treesitter-config')

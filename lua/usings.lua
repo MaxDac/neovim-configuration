@@ -106,5 +106,8 @@ require('packer').startup(function(use)
 
   -- Find in files plugin
   use {'dyng/ctrlsf.vim'}
+
+  -- Rust
+  use {'simrat39/rust-tools.nvim'}
 end)
 

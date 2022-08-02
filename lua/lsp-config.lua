@@ -26,6 +26,12 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
 end
 
+local rust_on_attach = function(client, bufnr)
+  on_attach(client, bufnr)
+
+  require('completion').on_attach(client)
+end
+
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- lspconfig.sumneko_lua.setup {
@@ -95,31 +101,24 @@ lspconfig.flow.setup({
   root_dir = function() return vim.loop.cwd() end
 })
 
-rust_tools.setup({
-  tools = { -- rust-tools options
-    autoSetHints = true,
-    hover_with_actions = true,
-    inlay_hints = {
-      show_parameter_hints = false,
-      parameter_hints_prefix = "",
-      other_hints_prefix = "",
-    },
-  },
-
-  -- all the opts to send to nvim-lspconfig
-  -- these override the defaults set by rust-tools.nvim
-  -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#rust_analyzer
-  server = {
-    -- on_attach is a callback called when the language server attachs to the buffer
-    -- on_attach = on_attach,
-    settings = {
-      -- to enable rust-analyzer settings visit:
-      -- https://github.com/rust-analyzer/rust-analyzer/blob/master/docs/user/generated_config.adoc
-      ["rust-analyzer"] = {
-        -- enable clippy on save
-        checkOnSave = {
-          command = "clippy"
+lspconfig.rust_analyzer.setup({
+  on_attach = rust_on_attach,
+  capabilities = capabilities,
+  settings = {
+    ["rust-analyzer"] = {
+      imports = {
+        granularity = {
+          group = "module",
         },
+        prefix = "self"
+      },
+      cargo = {
+        buildScripts = {
+          enable = true
+        }
+      },
+      procMacro = {
+        enable = true
       }
     }
   }

@@ -108,6 +108,7 @@ require('packer').startup(function(use)
   use {'dyng/ctrlsf.vim'}
 
   -- Rust
+  use {'nvim-lua/completion-nvim'}
   use {'simrat39/rust-tools.nvim'}
 end)
 

@@ -107,6 +107,9 @@ require('packer').startup(function(use)
   -- Find in files plugin
   use {'dyng/ctrlsf.vim'}
 
+  -- Git worktree plugin
+  use {'ThePrimeagen/git-worktree.nvim'}
+
   -- Rust
   use {'nvim-lua/completion-nvim'}
   use {'simrat39/rust-tools.nvim'}

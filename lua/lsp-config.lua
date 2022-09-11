@@ -77,7 +77,7 @@ lspconfig.html.setup({
   cmd = {'html-languageserver', '--stdio'},
   capabilities = capabilities,
   -- Adding heex files 
-  filetypes = {'html', 'heex'}
+  filetypes = {'html', 'heex', 'sface'}
 })
 
 lspconfig.cssls.setup({

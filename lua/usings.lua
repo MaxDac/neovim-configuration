@@ -110,5 +110,8 @@ require('packer').startup(function(use)
   -- Rust
   use {'nvim-lua/completion-nvim'}
   use {'simrat39/rust-tools.nvim'}
+
+  -- Copilot
+  use {'github/copilot.vim'}
 end)
 

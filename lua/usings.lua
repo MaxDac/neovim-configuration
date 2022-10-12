@@ -85,9 +85,7 @@ require('packer').startup(function(use)
   use {'vim-test/vim-test'}
 
   -- terminal
-  use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
-    require("toggleterm").setup()
-  end}
+  use {"akinsho/toggleterm.nvim", tag = '*'}
 
   -- status bar
   -- use {'feline-nvim/feline.nvim'}

@@ -123,3 +123,11 @@ lspconfig.rust_analyzer.setup({
     }
   }
 })
+
+local omnisharp_bin = "OmniSharp"
+
+lspconfig.omnisharp.setup({
+    cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) },
+    capabilities = capabilities
+})
+

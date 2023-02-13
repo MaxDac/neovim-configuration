@@ -89,6 +89,7 @@ lspconfig.cssls.setup({
 lspconfig.tsserver.setup({
   capabilities = capabilities,
   filetypes = {'typescript', 'typescriptreact', 'typescript.tsx'},
+  cmd = { "typescript-language-server", "--stdio" },
   root_dir = function() return vim.loop.cwd() end
 })
 

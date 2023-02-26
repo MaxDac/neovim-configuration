@@ -8,6 +8,9 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 
+-- Remapping leader key
+vim.g.mapleader = " "
+
 -- Trying to associate the command ':lua vim.lsp.buf.definition()' to a key shortcut 
 vim.api.nvim_set_keymap('n', '<C-b>', ':lua vim.lsp.buf.definition()<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-n>', ':bnext<CR>', { noremap = true, silent = true })

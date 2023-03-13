@@ -1,3 +1,4 @@
 - Install zsh, Oh My zsh and PowerLevel10k ([here](https://dev.to/abdfnx/oh-my-zsh-powerlevel10k-cool-terminal-1no0))
 - Install Erlang and Elixir ([download the packages here](https://www.erlang-solutions.com/downloads/))
+- If Elixir is not available directly for the latest version of Erlang, please refer to [this page](https://elixir-lang.org/install.html#precompiled-package) for precompiled packages.
 - Install elixir-ls ([here](https://github.com/elixir-lsp/elixir-ls#building-and-running))

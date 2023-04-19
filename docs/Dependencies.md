@@ -2,3 +2,8 @@
 - Install Erlang and Elixir ([download the packages here](https://www.erlang-solutions.com/downloads/))
 - If Elixir is not available directly for the latest version of Erlang, please refer to [this page](https://elixir-lang.org/install.html#precompiled-package) for precompiled packages.
 - Install elixir-ls ([here](https://github.com/elixir-lsp/elixir-ls#building-and-running))
+
+### Note
+
+It can happen that `elixir-ls` produces sh that are of incorrect format. In this case, follow the information listed
+at [this link](https://stackoverflow.com/a/27934455/8620481)

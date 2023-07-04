@@ -1,3 +1,10 @@
+Before starting, Node, npm and yarn must be installed in the machine. For WSL2, remember to add the following configuration line to `/etc/wsl.conf`:
+
+```bash
+[interop]
+appendWindowsPath=false
+```
+
 Html and Css autocompletion are already configured, but the following steps are required to install the language server:
 
 - Install the language servers through npm: `sudo npm install --global vscode-html-languageserver-bin vscode-css-languageserver-bin typescript-language-server`

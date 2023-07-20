@@ -4,9 +4,9 @@
   - Follow [this guide](https://asdf-vm.com/guide/getting-started.html) to install asdf.
   - Follow [this guide](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/asdf) to integrate asdf with zsh.
   - Install [the Elixir and Erlang asdf plugin](https://github.com/asdf-vm/asdf-elixir).
-  - `asdf` can install precompiled versions of Elixir and Erlang that can be found at [this website](https://bobs-list.kobrakai.de)
+  - `asdf` can install precompiled versions of Elixir and Erlang that can be found at [this website](https://bobs-list.kobrakai.de). Or alternatively, you can execute `asdf install elixir ref:<commit reference>`, taking the reference from the version list that can be found [here](https://github.com/elixir-lang/elixir/releases).
 - If Elixir is not available directly for the latest version of Erlang, please refer to [this page](https://elixir-lang.org/install.html#precompiled-package) for precompiled packages.
-- Install elixir-ls ([here](https://github.com/elixir-lsp/elixir-ls#building-and-running))
+- ~~Install elixir-ls ([here](https://github.com/elixir-lsp/elixir-ls#building-and-running))~~ It is recommend while using ASDF to install the [release](https://github.com/elixir-lsp/elixir-ls/releases) files instead. They are already compiled, so it would be only copy the inflated archive to the directory of choosing.
 
 ### Note
 

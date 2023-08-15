@@ -32,4 +32,3 @@ telescope.setup {
 
 -- Adding git worktree plugin to telescope
 telescope.load_extension("git_worktree")
-

@@ -1,5 +1,5 @@
 require('packer').startup(function(use)
-  use 'wbthomason/packer.vim'
+  use { 'wbthomason/packer.nvim' }
 
   -- LSP integration
   use 'neovim/nvim-lspconfig'
@@ -15,14 +15,15 @@ require('packer').startup(function(use)
 
   -- Autocompletion packages
   use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cpm-nvim-lsp'
-  use 'hrsh7th/cpm-buffer'
-  use 'hrsh7th/cpm-path'
-  use 'hrsh7th/cpm-cmdline'
+
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path' }
+  use { 'hrsh7th/cmp-cmdline' }
 
   -- Installing snippet engine for nvim-cmp
-  use 'hrsh7th/cmd-vsnip'
-  use 'hrsh7th/vim-vsnip'
+  use { 'hrsh7th/vim-vsnip' }
+  use { 'hrsh7th/cmp-vsnip' }
 
   -- Treesitter
   use 'nvim-treesitter/nvim-treesitter'
@@ -32,7 +33,17 @@ require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
-      'nvim-lua/plenary.nvim'
+      'nvim-lua/plenary.nvim',
+      'ThePrimeagen/git-worktree.nvim',
+    }
+  }
+
+  -- Status bar
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+      opt = true,
     }
   }
 
@@ -41,4 +52,6 @@ require('packer').startup(function(use)
     tag = '*',
   }
 
+  -- Colour scheme
+  use 'EdenEast/nightfox.nvim'
 end)

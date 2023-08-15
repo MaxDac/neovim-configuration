@@ -1,4 +1,3 @@
-
 local cmp = require("cmp")
 --
 -- helper functions

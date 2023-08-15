@@ -5,12 +5,12 @@ require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
 
   -- Icons
-  use 'kyazdani42/nvim-web-devicons'
+  use 'nvim-tree/nvim-web-devicons'
 
   -- Error visualisation
   use {
     'folke/trouble.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
+    requires = 'nvim-trekyazdani42e/nvim-web-devicons'
   }
 
   -- Autocompletion packages
@@ -42,14 +42,14 @@ require('packer').startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     requires = {
-      'kyazdani42/nvim-web-devicons',
+      'nvim-tree/nvim-web-devicons',
       opt = true,
     }
   }
 
   -- Tabs
   use {'akinsho/bufferline.nvim', tag = "*",
-    requires = 'kyazdani42/nvim-web-devicons'}
+    requires = 'nvim-tree/nvim-web-devicons'}
 
   use {
     'akinsho/toggleterm.nvim',

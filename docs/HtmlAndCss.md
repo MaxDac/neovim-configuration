@@ -7,9 +7,13 @@ appendWindowsPath=false
 
 Html and Css autocompletion are already configured, but the following steps are required to install the language server:
 
-- Install the language servers through npm: `sudo npm install --global vscode-html-languageserver-bin vscode-css-languageserver-bin typescript-language-server`
-- Install Tailwind language server with `npm install -g @tailwindcss/language-server`
-- The configuration should handle the commands as they are when installed, if not remap them using symbolic links
+- Install the language servers through npm: 
+
+```bash
+npm install --global vscode-html-languageserver-bin vscode-css-languageserver-bin typescript-language-server @tailwindcss/language-server
+```
+
+- It could be needed the insertion of symbolic links to match the command name for the language servers 
 
 ```bash
 NODE_PATH=node-v18.16.1-linux-x64

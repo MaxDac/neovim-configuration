@@ -47,6 +47,10 @@ require('packer').startup(function(use)
     }
   }
 
+  -- Tabs
+  use {'akinsho/bufferline.nvim', tag = "*",
+    requires = 'kyazdani42/nvim-web-devicons'}
+
   use {
     'akinsho/toggleterm.nvim',
     tag = '*',

@@ -1,5 +1,5 @@
-local cmp = require'cmp'
-
+local cmp = require("cmp")
+--
 -- helper functions
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -13,13 +13,14 @@ end
 cmp.setup({
   snippet = {
     expand = function(args)
-      -- setting up snippet engine
-      -- this is for vsnip, if you're using other
-      -- snippet engine, please refer to the `nvim-cmp` guide
       vim.fn["vsnip#anonymous"](args.body)
-    end,
+    end
   },
-  mapping = {
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -40,7 +41,7 @@ cmp.setup({
       	feedkey("<Plug>(vsnip-jump-prev)", "")
       end
     end, { "i", "s" }),
-  },
+  }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' },

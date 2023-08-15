@@ -13,4 +13,5 @@ To use it, clone this repo in the `~/.config` folder and rename it to `nvim`.
 - To install html and css language servers, please follow the procedure listed [here](docs/HtmlAndCss.md).
 - To enable CtrlSF for finding text in files, please refer to [this page](docs/CtrlSF.md).
 - To install C# OmniSharp for autocompletion, follow [these instructions](docs/CSharp.md).
+- To install Lua LSP, follow [these instructions](docs/Lua.md).
 

@@ -35,6 +35,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- Configuring mason before requiring lspconfig
+require('mason').setup()
+require('mason-lspconfig').setup {
+  ensure_installed = {
+    'elixirls',
+    'efm',
+    'html',
+    'cssls',
+    'tailwindcss',
+    'lua_ls',
+    'svelte',
+  }
+}
+
 -- Configuring language servers
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities() -- vim.lsp.protocol.make_client_capabilities()
@@ -51,7 +65,6 @@ lspconfig.efm.setup {
 }
 
 lspconfig.html.setup {
-  cmd = { 'html-languageserver', '--stdio' },
   capabilities = capabilities,
   filetypes = {
     'html',
@@ -61,12 +74,10 @@ lspconfig.html.setup {
 }
 
 lspconfig.cssls.setup {
-  cmd = { 'css-languageserver', '--stdio' },
   capabilities = capabilities
 }
 
 lspconfig.tailwindcss.setup {
-  cmd = { 'tailwindcss-language-server', '--stdio' },
   capabilities = capabilities,
   init_options = {
     userLanguages = {

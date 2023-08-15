@@ -58,4 +58,11 @@ require('packer').startup(function(use)
 
   -- Colour scheme
   use 'EdenEast/nightfox.nvim'
+
+  -- Mason packages, for automatic LSP downloads
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+  }
 end)
+

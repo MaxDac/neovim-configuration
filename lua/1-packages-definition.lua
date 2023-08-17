@@ -64,5 +64,9 @@ require('packer').startup(function(use)
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
   }
+
+  -- Copilot
+  -- For a fresh start, after having installed it with packer (`:PackerInstall`), execute the command `:Copilot setup` to login.
+  use 'github/copilot.vim'
 end)
 

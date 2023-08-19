@@ -40,7 +40,8 @@ require('mason').setup()
 require('mason-lspconfig').setup {
   ensure_installed = {
     'elixirls',
-    'efm',
+    -- efm can't be installed automatically with Mason
+    -- 'efm',
     'html',
     'cssls',
     'tailwindcss',

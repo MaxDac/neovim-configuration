@@ -1,4 +1,24 @@
-require('packer').startup(function(use)
+local fmt = string.format
+local pack_path = vim.fn.stdpath("data") .. "/site/pack"
+local packer = require('packer')
+
+-- ensure a given plugin from github.com/<user>/<repo> is cloned in the pack/packer/start directory
+local function ensure (user, repo)
+  local install_path = fmt("%s/packer/start/%s", pack_path, repo)
+  if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+    vim.api.nvim_command(fmt("!git clone https://github.com/%s/%s %s", user, repo, install_path))
+    vim.api.nvim_command(fmt("packadd %s", repo))
+    return true
+  end
+
+  return false
+end
+
+local function ensure_packer()
+  ensure("wbthomason", "packer.nvim")
+end
+
+packer.startup(function(use)
   use { 'wbthomason/packer.nvim' }
 
   -- LSP integration
@@ -68,5 +88,10 @@ require('packer').startup(function(use)
   -- Copilot
   -- For a fresh start, after having installed it with packer (`:PackerInstall`), execute the command `:Copilot setup` to login.
   use 'github/copilot.vim'
+
+  -- ensure the plugin manager is installed
+  if ensure_packer() then
+    packer.sync()
+  end
 end)
 

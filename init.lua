@@ -8,7 +8,6 @@ vim.o.termguicolors = true
 
 vim.g.mapleader = " "
 
-require('0-ensures')
 require('1-packages-definition')
 require('2-nvim-cmp-configuration')
 require('3-lsp-config')

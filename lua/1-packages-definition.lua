@@ -13,6 +13,10 @@ local function ensure (user, repo)
   return false
 end
 
+local function reload_config ()
+  dofile(vim.env.MYVIMRC)
+end
+
 local packer_ensured = ensure("wbthomason", "packer.nvim")
 
 local packer = require('packer')
@@ -91,6 +95,7 @@ packer.startup(function(use)
   -- ensure the plugin manager is installed
   if packer_ensured then
     packer.sync()
+    reload_config()
   end
 end)
 

@@ -1,6 +1,5 @@
 local fmt = string.format
 local pack_path = vim.fn.stdpath("data") .. "/site/pack"
-local packer = require('packer')
 
 -- ensure a given plugin from github.com/<user>/<repo> is cloned in the pack/packer/start directory
 local function ensure (user, repo)
@@ -14,9 +13,9 @@ local function ensure (user, repo)
   return false
 end
 
-local function ensure_packer()
-  ensure("wbthomason", "packer.nvim")
-end
+local packer_ensured = ensure("wbthomason", "packer.nvim")
+
+local packer = require('packer')
 
 packer.startup(function(use)
   use { 'wbthomason/packer.nvim' }
@@ -90,7 +89,7 @@ packer.startup(function(use)
   use 'github/copilot.vim'
 
   -- ensure the plugin manager is installed
-  if ensure_packer() then
+  if packer_ensured then
     packer.sync()
   end
 end)

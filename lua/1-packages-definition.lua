@@ -94,13 +94,14 @@ packer.startup(function(use)
 
   -- Unit Testing
   use {
-    "nvim-neotest/neotest",
+    'nvim-neotest/neotest',
     requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "antoinemadec/FixCursorHold.nvim",
-      "jfpedroza/neotest-elixir",
-      "nvim-neotest/neotest-plenary"
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+      'antoinemadec/FixCursorHold.nvim',
+      'jfpedroza/neotest-elixir',
+      'nvim-neotest/neotest-plenary',
+      'mortepau/codicons.nvim'
     }
   }
 

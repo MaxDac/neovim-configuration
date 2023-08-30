@@ -28,4 +28,11 @@ require('nightfox').setup {
   }
 }
 
+require('neotest').setup {
+  adapters = {
+    require('neotest-plenary'),
+    require('neotest-elixir'),
+  }
+}
+
 vim.cmd('colorscheme terafox')

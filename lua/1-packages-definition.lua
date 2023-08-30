@@ -92,6 +92,18 @@ packer.startup(function(use)
   -- For a fresh start, after having installed it with packer (`:PackerInstall`), execute the command `:Copilot setup` to login.
   use 'github/copilot.vim'
 
+  -- Unit Testing
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "jfpedroza/neotest-elixir",
+      "nvim-neotest/neotest-plenary"
+    }
+  }
+
   -- ensure the plugin manager is installed
   if packer_ensured then
     packer.sync()

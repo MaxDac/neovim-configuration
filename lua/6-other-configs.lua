@@ -11,12 +11,12 @@ require('trouble').setup {
 
 require('lualine').setup()
 
-require('bufferline').setup {
-  options = {
-    close_icon = 'x',
-    buffer_close_icon = 'x'
-  }
-}
+require('bufferline').setup()
+--   options = {
+--     close_icon = 'x',
+--     buffer_close_icon = 'x'
+--   }
+-- }
 
 require('nightfox').setup {
   palettes = {

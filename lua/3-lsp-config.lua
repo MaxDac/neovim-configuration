@@ -44,6 +44,7 @@ require('mason-lspconfig').setup {
     -- 'efm',
     'html',
     'cssls',
+    'tsserver',
     'tailwindcss',
     'lua_ls',
     'svelte',
@@ -75,6 +76,10 @@ lspconfig.html.setup {
 }
 
 lspconfig.cssls.setup {
+  capabilities = capabilities
+}
+
+lspconfig.tsserver.setup {
   capabilities = capabilities
 }
 

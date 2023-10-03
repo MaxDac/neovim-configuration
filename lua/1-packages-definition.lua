@@ -72,7 +72,8 @@ packer.startup(function(use)
 
   -- Tabs
   use {'akinsho/bufferline.nvim', tag = "*",
-    requires = 'nvim-tree/nvim-web-devicons'}
+    requires = 'nvim-tree/nvim-web-devicons'
+  }
 
   use {
     'akinsho/toggleterm.nvim',
@@ -86,6 +87,12 @@ packer.startup(function(use)
   use {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
+  }
+
+  -- Elixir Tools
+  use {
+    "elixir-tools/elixir-tools.nvim", tag = "stable",
+    requires = { "nvim-lua/plenary.nvim" }
   }
 
   -- Copilot

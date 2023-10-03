@@ -55,16 +55,22 @@ require('mason-lspconfig').setup {
 local lspconfig = require('lspconfig')
 local capabilities = require('cmp_nvim_lsp').default_capabilities() -- vim.lsp.protocol.make_client_capabilities()
 
--- Elixir
-lspconfig.elixirls.setup {
-  cmd = { "elixir-ls" },
-  capabilities = capabilities
-}
+require("elixir").setup({
+  nextls = {enable = false},
+  credo = {enable = true},
+  elixirls = {enable = true},
+})
 
-lspconfig.efm.setup {
-  filetypes = { 'elixir' },
-  capabilities = capabilities
-}
+-- Elixir
+-- lspconfig.elixirls.setup {
+--   cmd = { "elixir-ls" },
+--   capabilities = capabilities
+-- }
+
+-- lspconfig.efm.setup {
+--   filetypes = { 'elixir' },
+--   capabilities = capabilities
+-- }
 
 lspconfig.html.setup {
   capabilities = capabilities,

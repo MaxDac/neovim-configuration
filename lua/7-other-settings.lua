@@ -8,4 +8,5 @@ vim.api.nvim_set_keymap('n', '<leader>tf', ':lua require("neotest").run.run(vim.
 vim.api.nvim_set_keymap('n', '<leader>ts', ':lua require("neotest").summary.toggle()<CR>', { noremap = true, silent = true })
 
 -- Color column
-vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=0, bg="#001919" })
+vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=0, bg="#132124" })
+vim.api.nvim_set_hl(0, "CursorColumn", { ctermbg=0, bg="#132124" })

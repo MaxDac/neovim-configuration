@@ -6,10 +6,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 vim.o.colorcolumn = "80,120"
-
-vim.cmd([[highlight ColorColumn ctermbg=0 guibg=lightgrey]])
-vim.cmd([[highlight Normal ctermfg=white ctermbg=black]])
-vim.cmd([[autocmd ColorScheme * highlight CursorLineNr cterm=bold term=bold gui=bold]])
+vim.o.cursorcolumn = true
 
 vim.g.mapleader = " "
 

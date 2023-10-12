@@ -6,8 +6,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.termguicolors = true
 vim.o.colorcolumn = "80,120"
-
-vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=0, bg="#0a0a0a" })
+vim.o.cursorcolumn = true
 
 vim.g.mapleader = " "
 

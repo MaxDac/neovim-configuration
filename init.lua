@@ -7,6 +7,7 @@ vim.o.relativenumber = true
 vim.o.termguicolors = true
 vim.o.colorcolumn = "80,120"
 vim.o.cursorcolumn = true
+vim.o.cursorline = true
 
 vim.g.mapleader = " "
 

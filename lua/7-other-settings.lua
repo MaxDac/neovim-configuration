@@ -10,3 +10,4 @@ vim.api.nvim_set_keymap('n', '<leader>ts', ':lua require("neotest").summary.togg
 -- Color column
 vim.api.nvim_set_hl(0, "ColorColumn", { ctermbg=0, bg="#17282C" })
 vim.api.nvim_set_hl(0, "CursorColumn", { ctermbg=0, bg="#17282C" })
+vim.api.nvim_set_hl(0, "CursorLine", { ctermbg=0, bg="#17282C" })

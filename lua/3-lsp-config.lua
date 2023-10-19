@@ -58,7 +58,10 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities() -- vim.lsp.p
 require("elixir").setup({
   nextls = {enable = false},
   credo = {enable = true},
-  elixirls = {enable = true},
+  elixirls = {
+    enable = true,
+    tag = 'v0.17.1',
+  },
 })
 
 -- Elixir

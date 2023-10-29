@@ -112,6 +112,9 @@ packer.startup(function(use)
     }
   }
 
+  -- Git diffs
+  use 'sindrets/diffview.nvim'
+
   -- ensure the plugin manager is installed
   if packer_ensured then
     packer.sync()

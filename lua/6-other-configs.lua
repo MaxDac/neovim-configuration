@@ -11,7 +11,11 @@ require('trouble').setup {
 
 require('lualine').setup()
 
-require('bufferline').setup()
+require('bufferline').setup {
+  options = {
+    truncate_names = false
+  }
+}
 --   options = {
 --     close_icon = 'x',
 --     buffer_close_icon = 'x'

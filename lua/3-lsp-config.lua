@@ -48,6 +48,8 @@ require('mason-lspconfig').setup {
     'tailwindcss',
     'lua_ls',
     'svelte',
+    'powershell_es',
+    'omnisharp'
   }
 }
 
@@ -172,3 +174,13 @@ lspconfig.lua_ls.setup {
   },
   capabilities = capabilities
 }
+
+lspconfig.powershell_es.setup {
+  capabilities = capabilities
+}
+
+lspconfig.omnisharp.setup {
+  capabilities = capabilities,
+  cmd = { "omnisharp", "--languageserver" , "--hostPID", tostring(vim.fn.getpid()) },
+}
+

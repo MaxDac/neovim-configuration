@@ -39,7 +39,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 require('mason').setup()
 require('mason-lspconfig').setup {
   ensure_installed = {
-    'elixirls',
+    -- Elixir-LS will be probably installed by elixir-tools, de-comment if not
+    -- 'elixirls',
     -- efm can't be installed automatically with Mason
     -- 'efm',
     'html',
@@ -60,7 +61,7 @@ require("elixir").setup({
   credo = {enable = true},
   elixirls = {
     enable = true,
-    tag = 'v0.17.1',
+    tag = 'v0.17.6',
   },
 })
 

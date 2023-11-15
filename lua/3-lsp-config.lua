@@ -50,7 +50,6 @@ require('mason-lspconfig').setup {
     'lua_ls',
     'svelte',
     'ocaml-lsp',
-    'ocamlformat',
   }
 }
 

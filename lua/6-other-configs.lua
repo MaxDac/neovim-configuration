@@ -38,17 +38,13 @@ require('neotest').setup {
     require('neotest-elixir'),
   },
   icons = {
-  expanded = "",
-  child_prefix = "",
-  child_indent = "",
-  final_child_prefix = "",
-  non_collapsible = "",
-  collapsed = "",
-  passed = "",
-  running = "",
-  failed = "",
-  unknown = ""
-},
+    passed = '✅',
+    failed = '❌',
+    skipped = '⏭️',
+    unknown = '❓',
+    running = '🔄',
+    running_animated = { '↪️', '↩️', '↪️', '↩️' },
+  }
 }
 
 require("neodev").setup({

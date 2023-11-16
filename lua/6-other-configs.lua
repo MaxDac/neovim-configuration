@@ -39,4 +39,8 @@ require('neotest').setup {
   }
 }
 
+require("neodev").setup({
+  library = { plugins = { "neotest" }, types = true },
+})
+
 vim.cmd('colorscheme terafox')

@@ -107,6 +107,8 @@ packer.startup(function(use)
   -- For a fresh start, after having installed it with packer (`:PackerInstall`), execute the command `:Copilot setup` to login.
   use 'github/copilot.vim'
 
+  use 'folke/neodev.nvim'
+
   -- Unit Testing
   use {
     'nvim-neotest/neotest',
@@ -116,7 +118,8 @@ packer.startup(function(use)
       'antoinemadec/FixCursorHold.nvim',
       'jfpedroza/neotest-elixir',
       'nvim-neotest/neotest-plenary',
-      'mortepau/codicons.nvim'
+      'mortepau/codicons.nvim',
+      'folke/neodev.nvim'
     }
   }
 

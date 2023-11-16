@@ -36,6 +36,14 @@ require('neotest').setup {
   adapters = {
     require('neotest-plenary'),
     require('neotest-elixir'),
+  },
+  icons = {
+    passed = '✅',
+    failed = '❌',
+    skipped = '⏭️',
+    unknown = '❓',
+    running = '🔄',
+    running_animated = { '↪️', '↩️', '↪️', '↩️' },
   }
 }
 

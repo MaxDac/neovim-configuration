@@ -61,7 +61,7 @@ require("elixir").setup({
   credo = {enable = true},
   elixirls = {
     enable = true,
-    tag = 'v0.17.9',
+    tag = 'v0.18.1',
   },
 })
 

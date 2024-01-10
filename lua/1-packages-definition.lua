@@ -126,6 +126,16 @@ packer.startup(function(use)
   -- Git diffs
   use 'sindrets/diffview.nvim'
 
+  -- Debug
+  use 'mfussenegger/nvim-dap'
+
+  use {
+    "rcarriga/nvim-dap-ui",
+    requires = {
+      "mfussenegger/nvim-dap"
+    }
+  }
+
   -- ensure the plugin manager is installed
   if packer_ensured then
     packer.sync()

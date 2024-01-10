@@ -13,6 +13,14 @@ local function ensure (user, repo)
   return false
 end
 
+-- Autocommand that reloads neovim whenever you save the plugins.lua file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+  augroup end
+]])
+
 local function reload_config ()
   dofile(vim.env.MYVIMRC)
 end
@@ -99,6 +107,8 @@ packer.startup(function(use)
   -- For a fresh start, after having installed it with packer (`:PackerInstall`), execute the command `:Copilot setup` to login.
   use 'github/copilot.vim'
 
+  use 'folke/neodev.nvim'
+
   -- Unit Testing
   use {
     'nvim-neotest/neotest',
@@ -108,7 +118,8 @@ packer.startup(function(use)
       'antoinemadec/FixCursorHold.nvim',
       'jfpedroza/neotest-elixir',
       'nvim-neotest/neotest-plenary',
-      'mortepau/codicons.nvim'
+      'mortepau/codicons.nvim',
+      'folke/neodev.nvim'
     }
   }
 

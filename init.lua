@@ -11,6 +11,10 @@ vim.o.cursorline = true
 
 vim.g.mapleader = " "
 
+vim.opt.timeoutlen = 600 -- time to wait for a mapped sequence to complete (in milliseconds) default is 1000
+vim.opt.updatetime = 400 -- faster completion (4000ms default)
+
+require('0-1-autocommands')
 require('1-packages-definition')
 require('2-nvim-cmp-configuration')
 require('3-lsp-config')

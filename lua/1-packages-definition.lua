@@ -98,10 +98,10 @@ packer.startup(function(use)
   }
 
   -- Elixir Tools
-  use {
-    "elixir-tools/elixir-tools.nvim", tag = "stable",
-    requires = { "nvim-lua/plenary.nvim" }
-  }
+  -- use {
+  --   "elixir-tools/elixir-tools.nvim", tag = "stable",
+  --   requires = { "nvim-lua/plenary.nvim" }
+  -- }
 
   -- Copilot
   -- For a fresh start, after having installed it with packer (`:PackerInstall`), execute the command `:Copilot setup` to login.
